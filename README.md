@@ -133,3 +133,26 @@
 - Some performance bottlenecks, such as those caused by memory management defects, appear only during longer periods of sustained activity
 - Verify whether performance degrades over time
 - Long Duration: hours, days, etc etc
+
+## Spike Testing
+
+- Sudden and massive traffic increase
+- Good for simulating timed events like
+  - Black Friday
+  - Cyber Monday
+  - etc
+
+## Performance Testing Ethics
+
+- Ethics on how to use K6
+- Do not use K6 to attack or degrade a system
+  - We can use test.k6.io for learning
+  - Communicate with our team and stakeholders
+  - DO NOT RUN TESTS ON PRODUCTION SYSTEMS WITHOUT PERMISSION
+
+## Performance Testing Phases
+
+- Planning: define scope, objectives, and requirements
+- Scripting: create test cases and scenarios
+- Execution: run the test on given environments
+- Analysis: analyze the results and identify bottlenecks
