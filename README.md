@@ -126,3 +126,10 @@
 - Similar to load but higher throughput
 - Example:
   - load test 50 VU's, while stress test 100 VU's
+
+## Soak Testing
+
+- Similar to load testing but over a longer period
+- Some performance bottlenecks, such as those caused by memory management defects, appear only during longer periods of sustained activity
+- Verify whether performance degrades over time
+- Long Duration: hours, days, etc etc
