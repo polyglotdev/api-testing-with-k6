@@ -44,3 +44,28 @@
 6. Spike Testing: Testing software's ability to handle sudden spikes in traffic
 7. Scalability Testing: Software's ability to scale up or down based on demand
 8. Regression Testing: Testing software after changes to ensure no new bugs introduced
+
+## Frontend vs Backend Testing
+
+- Most software today is a combination of frontend and backend
+- Performance testing can be done on both
+- Common tools and methods
+- Differ on approach and emphasis
+
+## Frontend Testing
+
+- assess performance at UI level
+- round trp how and when page elements load
+- Ensure positive user experience
+- Possible metrics
+  - Load time
+  - Page size
+  - Page load time
+  - Page rendering time
+  - Page interactivity
+- Tools
+  - Lighthouse
+  - WebPageTest
+  - GTmetrix
+  - Pingdom
+  - etc, etc
