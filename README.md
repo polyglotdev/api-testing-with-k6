@@ -27,3 +27,9 @@
 - What function the system should perform
 - Tangible and can be tested directly
 - Examples: Login, Register, Search, etc.
+
+## Non-Functional Requirements
+
+- Qualities beyond core functionality
+- Describe how the system should perform
+- Examples: Performance, Scalability, Security, Latency, etc.
