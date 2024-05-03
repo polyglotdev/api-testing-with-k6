@@ -69,3 +69,30 @@
   - GTmetrix
   - Pingdom
   - etc, etc
+
+> 🧠 Don't just test the frontend, test the backend too!
+
+## Backend Testing
+
+- target core software functionality
+- Asses non-functional requirements as cohesive unit
+  - Scalability
+  - Elasticity
+  - Reliability
+  - Availability
+  - Resilience
+  - Latency
+
+## Backend vs Frontend Testing
+
+- Broader scope
+  - API testing
+- Less resource intensive
+- Does not test UX or UI
+- Fundamental architecture rather than visible elements
+- Wider range of elements to test
+  - Database
+  - Server
+  - Network
+  - etc
+- can be less resource intensive
