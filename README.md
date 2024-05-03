@@ -104,3 +104,11 @@
   - Ramp up: Gradual increase of virtual users over a specified time during testing mimicking real-world traffic
   - Ramp down: The gradual decrease of the virtual users over a specified time after the test is complete
   - Throughput: Measure of how much load the test generates over time, usually defined in VU per second
+  - Duration: Time it takes to run the entire test and its stages
+
+## Smoke Testing
+
+- Quick check to ensure core requirements work as expected
+- Minimal number of VUs and short duration
+- Check whether major issues exists on low traffic
+- Must be passed before continue other test type
