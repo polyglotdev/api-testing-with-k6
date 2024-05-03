@@ -112,3 +112,10 @@
 - Minimal number of VUs and short duration
 - Check whether major issues exists on low traffic
 - Must be passed before continue other test type
+
+## Load Testing
+
+- Test software's ability to handle expected number of users without performance degrading
+- How software handles expected traffic
+- Typically includes ramp up and ramp down
+- Fixed period (constant VU's)
