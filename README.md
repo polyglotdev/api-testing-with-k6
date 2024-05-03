@@ -119,3 +119,10 @@
 - How software handles expected traffic
 - Typically includes ramp up and ramp down
 - Fixed period (constant VU's)
+
+## Stress Testing
+
+- Test simulates the traffic the software is expected to experience at the highest point
+- Similar to load but higher throughput
+- Example:
+  - load test 50 VU's, while stress test 100 VU's
