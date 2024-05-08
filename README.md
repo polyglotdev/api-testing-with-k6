@@ -203,3 +203,5 @@ export default function () {
   sleep(1)
 }
 ```
+
+## The `--vus` (or `-u`) flag
