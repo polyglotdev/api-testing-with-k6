@@ -1,12 +1,10 @@
 import http from 'k6/http'
-import { sleep } from 'k6'
-
-export const options = {
-  vus: 1,
-  duration: '20s'
-}
+import { check } from 'k6'
 
 export default function () {
-  http.get('https://test.k6.io')
-  sleep(1)
+  let res = http.get('https://www.instagram.com/')
+  check(res, {
+    'status is 200': (r) => r.status === 200
+  })
+  console.log('Response time was ' + String(res.timings.duration) + ' ms')
 }
