@@ -186,3 +186,20 @@ export function setup() {
 ```
 
 Init code runs first and is called only once per VU. The default code runs as many times or as long as is configured in the test options.
+
+## Set Options
+
+Instead of typing `--vus 10` and `--duration 30s` every time, you can set these options in the script, you can set the options in the script.
+
+```javascript
+import http from 'k6/http'
+import { sleep } from 'k6'
+export const options = {
+  vus: 10,
+  duration: '30s',
+}
+export default function () {
+  http.get('http://test.k6.io')
+  sleep(1)
+}
+```
