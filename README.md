@@ -168,3 +168,21 @@
 > 🗒️ k6 runs multiple iterations in parallel with virtual users (VUs). In general terms, more virtual users means more simulated traffic.
 >
 > VUs are essentially parallel while(true) loops. Scripts are written in JavaScript, as ES6 modules, so you can break larger tests into smaller pieces or make reusable pieces as you like.
+
+## The init context and the default function
+
+For a test to run, you need to have *init* code, which prepares the test, and VU code, which makes requests.
+
+Code in the init context defines functions and configures the test options (like `duration`).
+
+Every test also has a `default` function, which defines the VU logic.
+
+```javascript
+import http from 'k6/http'
+
+export function setup() {
+  // init code
+}
+```
+
+Init code runs first and is called only once per VU. The default code runs as many times or as long as is configured in the test options.
