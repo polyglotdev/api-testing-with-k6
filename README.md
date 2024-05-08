@@ -214,3 +214,13 @@ export default function () {
 - `k6 run filename.js --vus 10 -d 30s`: run the script with 10 VUs for 30 seconds
 - `k6 run filename.js --vus N -i I`: run the script with N VUs for I iterations
   - I must be >= to N
+- Can combine with `--stage` flag or `-s` flag
+- Set number of VU at **START** of the test
+  - Idle until needed
+- `--vus` or `-u` < maximum VU in `-s`
+- `--vus` or `-u` > maximum VU in `-s`
+- `k6 run filename.js --vus 10 -s 5m:20, 10m:3`: run the script with 10 VUs for 5 minutes and 20 VUs for 10 minutes
+  - Start with 10 VUs
+  - After 5 minutes, increase to 20 VUs
+  - Decrease to 3 VU after 10 minutes
+  - 7 VU idle
