@@ -156,3 +156,9 @@
 - Scripting: create test cases and scenarios
 - Execution: run the test on given environments
 - Analysis: analyze the results and identify bottlenecks
+
+## K6 Commands
+
+- `k6 run script.js`: run the script
+- `k6 run --vus 10 --duration 30s script.js`: run the script with 10 VUs for 30 seconds
+- `k6 run --vus 10 --duration 30s --out influxdb=http://localhost:8086/myk6db script.js`: run the script with 10 VUs for 30 seconds and output the results to influxdb
