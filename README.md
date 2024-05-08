@@ -205,3 +205,12 @@ export default function () {
 ```
 
 ## The `--vus` (or `-u`) flag
+
+- Sets the number of virtual users(VUs) to simulate during the test
+- Must be combined with
+  - `--duration` flag or `-d` flag
+  - `--iterations` flag or `-i` flag
+  - `--stage` flag or `-s` flag
+- `k6 run filename.js --vus 10 -d 30s`: run the script with 10 VUs for 30 seconds
+- `k6 run filename.js --vus N -i I`: run the script with N VUs for I iterations
+  - I must be >= to N
