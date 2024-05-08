@@ -162,3 +162,9 @@
 - `k6 run script.js`: run the script
 - `k6 run --vus 10 --duration 30s script.js`: run the script with 10 VUs for 30 seconds
 - `k6 run --vus 10 --duration 30s --out influxdb=http://localhost:8086/myk6db script.js`: run the script with 10 VUs for 30 seconds and output the results to influxdb
+
+## Reading the Graphs
+
+> 🗒️ k6 runs multiple iterations in parallel with virtual users (VUs). In general terms, more virtual users means more simulated traffic.
+>
+> VUs are essentially parallel while(true) loops. Scripts are written in JavaScript, as ES6 modules, so you can break larger tests into smaller pieces or make reusable pieces as you like.
