@@ -224,3 +224,22 @@ export default function () {
   - After 5 minutes, increase to 20 VUs
   - Decrease to 3 VU after 10 minutes
   - 7 VU idle
+
+## Make K6 Sleep
+
+- `sleep` function
+- The `sleep` function pauses the VU for a specified amount of time
+- Performance testing simulates user behavior
+- `sleep` adds pauses between requests mimicking user behavior
+- Enhances realism of test
+
+## Use Cases for Sleep
+
+- Suitable
+  - Simulate sequential user behavior
+  - Imitate actions taking time
+  - High CPU usage
+- Not Suitable
+  - Stress test
+  - High Traffic scenarios
+  - Low CPU usage
