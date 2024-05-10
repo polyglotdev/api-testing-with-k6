@@ -1,8 +1,9 @@
 import { sleep } from 'k6'
 import http from 'k6/http'
+import { randomIntBetween } from 'https://jslib.k6.io/k6-utils/1.2.0/index.js'
 
 export default function () {
   http.get('https://k6.io')
-  sleep(Math.random() * 2)
+  sleep(randomIntBetween(20, 30))
   http.get('https://k6.io/features')
 }
