@@ -243,3 +243,44 @@ export default function () {
   - Stress test
   - High Traffic scenarios
   - Low CPU usage
+
+> The docker command for testing the instructor code is
+
+```bash
+docker run --name ai-assistant-testing-sample -p 8888:8888 -d timpamungkas/ai-assistant-testing:1.0.0
+```
+
+Then you can access the Swagger UI at [here](http://localhost:8888/alphamart/swagger-ui/index.html#/)
+
+## Metrics
+
+- Output from K6
+- Numbers that show specific aspects of the test
+- Can be used to identify bottlenecks
+
+## K6 Metric Types
+
+1. Counter: Incremental value
+   1. How many times a specific event occurred
+2. Gauge: Current value
+   1. Value at a specific point in time
+3. Rate: Rate of change
+   1. Percentage of an event
+4. Trend: Value over time
+   1. How a value changes over time(min, max, median, average, percentile)
+
+Here is a link to the [Built in metrics](https://grafana.com/docs/k6/latest/using-k6/metrics/reference/)
+
+## HTTP Specific Metrics
+
+
+
+
+
+| Metric Name           | What is it?                                                                                                                                                                               | Significance                                                                                                                                       |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `http_req_blocked`    | The time from when a request is made until the first byte is sent. This metric includes time spent on DNS lookup, TLS handshake (if applicable), and waiting for an available connection. | High values can indicate issues with network configuration, DNS resolution time, or connection saturation.                                         |
+| `http_req_connecting` | The time spent establishing a new TCP connection. If a connection is reused (like in keep-alive), this will be zero.                                                                      | High values could indicate network issues or server-side limitations in handling new connections.                                                  |
+| `http_req_duration`   | Total time for the request. It includes sending time, waiting, and receiving time.                                                                                                        | It's a key metric for overall request performance. Longer durations could indicate server-side processing delays, slow network, or backend issues. |
+| `http_req_failed`     | Percentage of the requests that failed. A request is considered a failure if it doesn't return a response or returns an unexpected response (like an error status code).                  | High failure rates are critical and could point to server errors, capacity issues, or network problems.                                            |
+| `http_req_receiving`  | Time spent receiving the response from the server.                                                                                                                                        | High values can indicate issues with the TLS configuration, network latency, or server-side processing of TLS connections.                         |
